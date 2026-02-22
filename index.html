@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RPG Roaming</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <canvas id="gameCanvas"></canvas>
+
+    <div id="notification" class="hidden"></div>
+
+    <div id="interaction-hint" class="hidden">Press SPACE to Talk</div>
+
+    <div id="dialogueBox" class="hidden">
+        <h3 id="npcName">Character Name</h3>
+        <p id="npcText">Dialogue text goes here...</p>
+        <button id="nextBtn" onclick="advanceDialogue()">Next</button>
+    </div>
+
+    <div id="start-screen">
+        <h1>THE FORGOTTEN FOREST</h1>
+        <p>Find the Wizard. Fix the Code.</p>
+        <button onclick="showCharacterSelect()">START ADVENTURE</button>
+    </div>
+
+<div id="character-screen" class="hidden">
+        <h1>What is your name, Hero?</h1>
+        
+        <input type="text" id="playerNameInput" placeholder="Enter Name" maxlength="10" 
+               style="padding: 10px; font-size: 20px; text-align: center; display: block; margin: 20px auto;">
+        
+        <button class="btn" onclick="startGameWithName()">Begin Adventure</button>
+    </div>
+
+    <div id="letterOverlay" class="hidden">
+        <div class="letter" id="letterContainer">
+            <div class="envelope" onclick="openLetter()">
+                <div class="envelope-paper"></div>
+                <div class="envelope-flap"></div>
+                <div class="envelope-detail"></div>
+                <div class="envelope__fold"></div>
+            </div>
+            <div class="paper">
+                <div class="paper-close" onclick="closeLetterUI()">×</div>
+                <div class="paper-content">
+                    <div class="content-wrapper">
+                        <h2 style="color: #c0392b; font-family: Courier New; margin-bottom: 20px; font-size: 1.8rem;">My dear love..</h2>
+                        
+                        <p style="font-size: 1.1rem; line-height: 1.5; margin-bottom: 15px; text-align: left;">Happy birthday Cece, Happy 22nd birthday, i hope you well. I hope in this 22nd birthday, everything you wished for will come true, i hope you will improve much better in the future, and i hope for the best.</p>
+                        
+                        <p style="font-size: 1.1rem; line-height: 1.5; margin-bottom: 15px; text-align: left;">I love you Cece, and i am sorry if i still disappoint or not good enough for you. I tried my best, and i always give you the best of me. I hope we will meet very soon, and i wish we can be together always.</p>
+                        
+                        <p style="font-size: 1.1rem; line-height: 1.5; margin-bottom: 15px; text-align: left;">I made this game for my project, but as well for you!! I wanted to do something special for your birthday, and this is it. I really hope you enjoyed it hehe. I know it is not perfect, but i tried my best. Anyway, happy birthday, and wish you the best!!</p>
+                        
+                        <p style="font-size: 1.2rem; margin-top: 30px; font-weight: bold; width: 100%; text-align: left;">With love,<br>Alfa</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
