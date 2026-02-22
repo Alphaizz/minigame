@@ -76,7 +76,7 @@ const npcSpriteSheet = new Image();
 npcSpriteSheet.src = 'assets/Villagers.png'; 
 
 const houseImage = new Image();
-houseImage.src = 'assets/Wooden_House.png'; 
+houseImage.src = 'assets/Wooden_house.png'; 
 
 const fenceImage = new Image();
 fenceImage.src = 'assets/Fences.png';
@@ -616,7 +616,7 @@ window.addEventListener('keydown', (e) => {
 
     // --- DEBUG / CHEAT SYSTEM (REMOVE LATER) ---
     // Press 'B' to instantly teleport to the Boss Arena
-    if (e.key === 'b' || e.key === 'B') {
+    /*if (e.key === 'b' || e.key === 'B') {
         player.hasWeapon = true;
         player.hasSword = true;
         player.hasBossKey = true;
@@ -631,7 +631,8 @@ window.addEventListener('keydown', (e) => {
         showNotification("DEBUG: Teleported to Boss! 🤖");
         return;
     }
-    
+    */
+   
     // --- NEW: Press 'N' to teleport back to the Forest ---
     if (e.key === 'n' || e.key === 'N') {
         generateWorld(0);      
